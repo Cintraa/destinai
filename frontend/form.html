@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Pedro Cintra" />
+    <title>DestinAI</title>
+
+    <link href="img/favicon.ico" rel="shortcut icon" type="image/icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+
+  </head>
+  <body>
+    <header>
+      <div class="navbar center">
+        <img src="img/logo_img.png" alt="logo" />
+      </div>
+    </header>
+
+    <main class="container">
+      <form id="trip-form" class="form-grid" aria-describedby="formHelp">
+        <section class="card" aria-labelledby="sectionA">
+          <h3 id="sectionA">Step 1: Where &amp; When?</h3>
+          <p class="helper" id="formHelp">Fill the fields below. Destination is fixed to Miami for this prototype.</p>
+          <div class="field-grid" role="group" aria-label="Where & When inputs">
+            <div class="field third">
+              <label for="destination">Location (Destination)</label>
+              <input id="destination" name="destination" type="text" value="Miami" readonly aria-readonly="true" />
+              <small class="helper">Always set to Miami.</small>
+            </div>
+            <div class="field third">
+              <label for="departureCity">Departure City</label>
+              <input id="departureCity" name="departureCity" type="text" placeholder="e.g., New York" required />
+            </div>
+            <div class="field third">
+              <label for="budgetUSD">Budget (USD)</label>
+              <div class="input-prefix">
+                <span class="currency" aria-hidden="true">$</span>
+                <input id="budgetUSD" name="budgetUSD" type="number" min="0" step="1" inputmode="numeric" placeholder="e.g., 1500" required />
+              </div>
+              <small class="helper">Numbers only, in US dollars.</small>
+            </div>
+            <div class="field third">
+              <label for="startDate">Date of Trip (Start)</label>
+              <input id="startDate" name="startDate" type="date" required />
+            </div>
+            <div class="field third">
+              <label for="endDate">Date of Trip (End)</label>
+              <input id="endDate" name="endDate" type="date" required />
+            </div>
+          </div>
+        </section>
+
+        <section class="card" aria-labelledby="sectionB">
+          <h3 id="sectionB">Step 2: Who Are You?</h3>
+          <div class="field-grid" role="group" aria-label="Demographics & Travelers">
+            <div class="field quarter">
+              <label for="age">Age</label>
+              <input id="age" name="age" type="number" min="0" max="120" placeholder="e.g., 29" required />
+            </div>
+            <div class="field full">
+              <label>Gender</label>
+              <div class="chip-group" role="radiogroup" aria-label="Gender">
+                <label class="chip"><input type="radio" name="gender" value="Female" required /> Female</label>
+                <label class="chip"><input type="radio" name="gender" value="Male" /> Male</label>
+                <label class="chip"><input type="radio" name="gender" value="Non-Binary" /> Non-Binary</label>
+                <label class="chip"><input type="radio" name="gender" value="Prefer Not to Say" /> Prefer Not to Say</label>
+              </div>
+            </div>
+            <div class="field third">
+              <label for="travelers">Number of Travelers</label>
+              <input id="travelers" name="travelers" type="number" min="1" max="9" value="1" required />
+            </div>
+          </div>
+        </section>
+
+        <section class="card" aria-labelledby="sectionC">
+          <h3 id="sectionC">Step 3: What Do You Love?</h3>
+          <div class="field-grid">
+            <div class="field full">
+              <div class="group-title">Entertainment & Nightlife</div>
+              <div class="checklist" id="entertainment">
+                <label class="check"><input type="checkbox" name="interests" value="Theme Parks/Amusement Parks" /> Theme Parks / Amusement Parks</label>
+                <label class="check"><input type="checkbox" name="interests" value="Nightclubs/Dance Venues" /> Nightclubs / Dance Venues</label>
+                <label class="check"><input type="checkbox" name="interests" value="Live Music/Concerts" /> Live Music / Concerts</label>
+                <label class="check"><input type="checkbox" name="interests" value="Theater/Musicals/Shows" /> Theater / Musicals / Shows</label>
+                <label class="check"><input type="checkbox" name="interests" value="Casinos/Gambling" /> Casinos / Gambling</label>
+              </div>
+
+              <div class="group-title">History & Culture</div>
+              <div class="checklist" id="culture">
+                <label class="check"><input type="checkbox" name="interests" value="Ancient Ruins/Archaeology" /> Ancient Ruins / Archaeology</label>
+                <label class="check"><input type="checkbox" name="interests" value="Historical Architecture" /> Historical Architecture</label>
+                <label class="check"><input type="checkbox" name="interests" value="Modern Architecture" /> Modern Architecture</label>
+                <label class="check"><input type="checkbox" name="interests" value="Museums - Art" /> Museums - Art</label>
+                <label class="check"><input type="checkbox" name="interests" value="Museums - History/Science" /> Museums - History / Science</label>
+                <label class="check"><input type="checkbox" name="interests" value="Local Festivals/Events" /> Local Festivals / Events</label>
+              </div>
+
+              <div class="group-title">Food & Drink</div>
+              <div class="checklist" id="food">
+                <label class="check"><input type="checkbox" name="interests" value="Fine Dining/Gourmet Restaurants" /> Fine Dining / Gourmet Restaurants</label>
+                <label class="check"><input type="checkbox" name="interests" value="Street Food/Food Trucks" /> Street Food / Food Trucks</label>
+                <label class="check"><input type="checkbox" name="interests" value="Fast Food" /> Fast Food</label>
+                <label class="check"><input type="checkbox" name="interests" value="Cooking Classes" /> Cooking Classes</label>
+                <label class="check"><input type="checkbox" name="interests" value="Winery/Brewery Tours" /> Winery / Brewery Tours</label>
+                <label class="check"><input type="checkbox" name="interests" value="Coffee Culture" /> Coffee Culture</label>
+              </div>
+
+              <div class="group-title">Nature & Adventure</div>
+              <div class="checklist" id="nature">
+                <label class="check"><input type="checkbox" name="interests" value="Swimming/Sunbathing" /> Swimming / Sunbathing</label>
+                <label class="check"><input type="checkbox" name="interests" value="Water Sports" /> Water Sports</label>
+                <label class="check"><input type="checkbox" name="interests" value="Hiking/Trekking" /> Hiking / Trekking</label>
+                <label class="check"><input type="checkbox" name="interests" value="Skiing/Snowboarding" /> Skiing / Snowboarding</label>
+                <label class="check"><input type="checkbox" name="interests" value="Wildlife Watching/Safaris" /> Wildlife Watching / Safaris</label>
+                <label class="check"><input type="checkbox" name="interests" value="Botanical Gardens/Arboretums" /> Botanical Gardens / Arboretums</label>
+                <label class="check"><input type="checkbox" name="interests" value="Extreme Sports" /> Extreme Sports</label>
+                <label class="check"><input type="checkbox" name="interests" value="Road Trip/Scenic Driving" /> Road Trip / Scenic Driving</label>
+              </div>
+
+               <div class="group-title">Sports & Shopping</div>
+              <div class="checklist" id="sports">
+                <label class="check"><input type="checkbox" name="interests" value="Attending Sports Games" /> Attending Sports Games</label>
+                <label class="check"><input type="checkbox" name="interests" value="Soccer" /> Soccer</label>
+                <label class="check"><input type="checkbox" name="interests" value="Football" /> Football</label>
+                <label class="check"><input type="checkbox" name="interests" value="Basketball" /> Basketball</label>
+                <label class="check"><input type="checkbox" name="interests" value="Tennis" /> Tennis</label>
+                <label class="check"><input type="checkbox" name="interests" value="Golf" /> Golf</label>
+                <label class="check"><input type="checkbox" name="interests" value="Luxury Shopping" /> Luxury Shopping</label>
+                <label class="check"><input type="checkbox" name="interests" value="Thrift/Vintage Shopping" /> Thrift / Vintage Shopping</label>
+                <label class="check"><input type="checkbox" name="interests" value="Local Markets/Bazaars" /> Local Markets / Bazaars</label>
+              </div>
+
+              <div class="group-title">Relaxation & Wellness</div>
+              <div class="checklist" id="wellness">
+                <label class="check"><input type="checkbox" name="interests" value="Spa/Wellness Retreats" /> Spa / Wellness Retreats</label>
+                <label class="check"><input type="checkbox" name="interests" value="Yoga/Meditation" /> Yoga / Meditation</label>
+                <label class="check"><input type="checkbox" name="interests" value="Photography Spots" /> Photography Spots</label>
+                <label class="check"><input type="checkbox" name="interests" value="Glamping/Boutique Hotels" /> Glamping / Boutique Hotels</label>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card" aria-label="Actions">
+          <div class="actions">
+            <button type="submit" class="btn">
+              <i class="fas fa-paper-plane" style="margin-right:8px"></i>
+              Generate Plan
+            </button>
+            <button type="reset" class="btn ghost">
+              <i class="fas fa-undo" style="margin-right:8px"></i>
+              Reset
+            </button>
+          </div>
+        </section>
+      </form>
+    </main>
+
+    <script src="js/script.js" defer></script>
+  </body>
+</html>

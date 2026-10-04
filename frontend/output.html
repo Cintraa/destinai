@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Pedro Cintra" />
+    <title>DestinAI — Results</title>
+
+    <link href="img/favicon.ico" rel="shortcut icon" type="image/icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <link href="css/output.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <header class="navbar">
+      <img src="img/logo_img.png" alt="DestinAI logo" />
+    </header>
+
+    <main>
+      <h1>Your Miami Trip Plan</h1>
+      <section class="grid">
+        <div class="card">
+          <h2>Itinerary</h2>
+          <div class="itin-wrap" id="itinWrap"><div id="itinerary"></div></div>
+          <button type="button" class="btn itin-toggle" id="itinToggle" hidden>Read more ▾</button>
+        </div>
+        <div class="card">
+          <h2>Weather</h2>
+          <div id="weather"></div>
+        </div>
+        <div class="card">
+          <h2>Flights</h2>
+          <div id="flights"></div>
+        </div>
+        <div class="card">
+          <h2>Hotels</h2>
+          <div id="hotels"></div>
+        </div>
+        <div class="card">
+          <h2>Places for You</h2>
+          <div id="places"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js" integrity="sha384-/TQbtLCAerC3jgaim+N78RZSDYV7ryeoBCVqTuzRrFec2akfBkHS7ACQ3PQhvMVi" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.6/purify.min.js" integrity="sha384-+VfUPEb0PdtChMwmBcBmykRMDd+v6D/oFmB3rZM/puCMDYcIvF968OimRh4KQY9a" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/output.js"></script>
+  </body>
+</html>

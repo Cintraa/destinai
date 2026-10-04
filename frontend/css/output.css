@@ -1,0 +1,225 @@
+:root {
+  --primary: #1d80c7;
+  --gradient: linear-gradient(90deg, #234a94 0%, #3080c8 30%, #fa556a 65%, #ff9500 100%);
+  --text: #1f2937;
+  --muted: #6b7280;
+  --bg: #ffffff;
+  --card: #ffffff;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  --radius: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Poppins, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 7%;
+}
+
+.navbar img {
+  width: 200px;
+}
+
+main {
+  max-width: 1100px;
+  margin: 24px auto 64px;
+  padding: 0 7%;
+}
+
+h1 {
+  font-size: 32px;
+  margin: 8px 0 18px;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  font-size: 22px;
+  margin: 0 0 8px;
+}
+
+.grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.card {
+  grid-column: span 12;
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+}
+
+.helper,.muted {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.row.stretch {
+  align-items: stretch;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  border-radius: 9999px;
+  background: var(--primary);
+  color: #fff;
+  border: 0;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+  text-decoration: none;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn.ghost {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.item {
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+}
+
+.item .row {
+  justify-content: space-between;
+}
+
+.weather-day {
+  flex: 1 1 120px;
+  text-align: center;
+  background: #f6f7fb;
+  border-radius: 14px;
+  padding: 10px;
+  font-size: 13px;
+}
+
+.place-group-title {
+  margin: 14px 0 6px;
+  font-size: 16px;
+}
+
+.place-card {
+  flex: 1 1 220px;
+  max-width: 100%;
+}
+
+.place-card img {
+  display: block;
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+.flight-card .flight-airline {
+  gap: 8px;
+}
+
+.flight-card .flight-airline img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.flight-card .flight-price {
+  text-align: right;
+}
+
+.flight-card .flight-route {
+  margin-top: 6px;
+}
+
+.itinerary h1,.itinerary h2, .itinerary h3 {
+  margin: 16px 0 6px;
+  -webkit-text-fill-color: initial;
+  color: var(--text);
+  background: none;
+}
+
+.itinerary h1 {
+  font-size: 24px;
+}
+
+.itinerary h2 {
+  font-size: 20px;
+}
+
+.itinerary h3 {
+  font-size: 17px;
+}
+
+.itinerary ul {
+  padding-left: 22px;
+}
+
+.itin-wrap {
+  position: relative;
+  overflow: hidden;
+  max-height: 350px;
+  transition: max-height 0.5s ease;
+}
+
+.itin-wrap::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 110px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff);
+  pointer-events: none;
+}
+
+.itin-wrap.open::after, .itin-wrap.short::after {
+  display: none;
+}
+
+.itin-wrap #itinerary {
+  padding-bottom: 16px;
+}
+
+.itin-toggle {
+  margin-top: 12px;
+}
