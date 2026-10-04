@@ -8,14 +8,7 @@
 
 ## Demo
 
-<!--
-  VIDEO: On GitHub, edit this file in the browser and drag your .mp4 onto the line below.
-  GitHub uploads it and replaces it with a link that plays inline. Delete this comment after.
-  Alternative: replace the line with a thumbnail that links to YouTube/Loom:
-  [![Watch the demo](docs/images/demo-thumbnail.png)](https://your-video-link)
--->
-
-https://github.com/user-attachments/assets/REPLACE-WITH-YOUR-VIDEO
+https://github.com/user-attachments/assets/ed7504d3-7361-406c-b991-37df3b1032e9
 
 *From an empty form to a full Miami trip plan in under a minute.*
 
@@ -23,15 +16,7 @@ https://github.com/user-attachments/assets/REPLACE-WITH-YOUR-VIDEO
 
 | Trip form | Trip plan |
 |:---------:|:---------:|
-| ![Trip form with destination, dates, budget, travelers and interests](docs/images/form.png) | ![Results page with AI itinerary, weather, flights, hotels and places](docs/images/results.png) |
-
-<!--
-  Optional extra screenshots. Uncomment any you add:
-  ![Landing page](docs/images/landing.png)
-  ![Fallback links when a service is unavailable](docs/images/fallback.png)
--->
-
----
+| <img src="https://github.com/user-attachments/assets/e1c17696-f5db-4ea7-b62a-dba4a228bdae" alt="img-form" width="450" /> | <img src="https://github.com/user-attachments/assets/26226104-3ee4-43d8-9033-8934d78720f3" alt="img-plan" width="450" /> |
 
 ## Table of Contents
 
