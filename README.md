@@ -2,6 +2,9 @@
 
 **Plan your vacation with AI.** DestinAI turns a short form into a complete, personalized trip plan. It gathers real flight prices, hotel options, the weather forecast and top-rated places that match your interests, then uses Google Gemini to write a day-by-day itinerary that fits your dates and budget.
 
+> [!NOTE]
+> **Repository Notice:** This repository is an archive/personal mirror and is not the original development repository.
+
 > **Prototype scope:** the destination is currently fixed to **Miami, FL**.
 
 ---
