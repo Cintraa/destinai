@@ -341,9 +341,9 @@ Flights and places are cached. Delete `backend/cache/` to force fresh results.
 
 ---
 
-## Team
-
-DestinAI was created by **Pedro Cintra**, **Abel Andrés Valle Zuta** and **Salvador Cascon**.
+## Contributors
+* @AndresVZ23
+* @Salvacb
 
 ---
 
