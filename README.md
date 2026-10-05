@@ -342,8 +342,8 @@ Flights and places are cached. Delete `backend/cache/` to force fresh results.
 ---
 
 ## Contributors
-* @AndresVZ23
-* @Salvacb
+Co-authored-by: AndresVZ23 <AndresVZ23@users.noreply.github.com>
+Co-authored-by: Salvacb <Salvacb@users.noreply.github.com>
 
 ---
 
